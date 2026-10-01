@@ -279,6 +279,58 @@ function burger() {
   }));
 }
 
+/* ───────── FLOATING PRODUCTS ─────────
+   전부 투명 PNG(누끼). 로고·검색창보다 아래 레이어라 겹쳐도 가리지 않는다. */
+const FLOATS = [
+  /* 실제 상품 — 크게, 진하게 */
+  { src:'float/real-01.png', big:true },
+  { src:'float/real-02.png', big:true },
+  { src:'float/real-03.png', big:true },
+  /* 더미 27종 */
+  ...Array.from({ length:27 }, (_, i) => ({ src:`float/f-${String(i+1).padStart(2,'0')}.png` })),
+];
+
+function floats() {
+  const layer = $('#floats');
+  if (!layer) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const narrow = innerWidth < 860;
+  const count  = narrow ? 11 : 20;
+  const rnd = (a, b) => a + Math.random() * (b - a);
+
+  /* 중복 없이 고르되 실상품 3개는 무조건 포함 */
+  const pool = FLOATS.filter(f => !f.big).sort(() => Math.random() - .5);
+  const picks = [...FLOATS.filter(f => f.big), ...pool].slice(0, count);
+
+  layer.innerHTML = picks.map((f, i) => {
+    /* 세로 분산 — 띄어쓰기 띄우고 대역을 나눈다 */
+    const top   = rnd(-6, 92);
+    const size  = f.big ? rnd(narrow ? 86 : 132, narrow ? 120 : 190)
+                        : rnd(narrow ? 54 : 70,  narrow ? 92  : 142);
+    /* 멀수록 작고·흐리고·느리게 — 깊이감 */
+    const depth = (size - 54) / 136;                  // 0(멀다) ~ 1(가깝다)
+    const dur   = rnd(74, 34) - depth * 8;            // 가까울수록 빠름
+    const delay = -rnd(0, dur);                       // 음수 딜레이 → 이미 흐르는 중에서 시작
+    const op    = f.big ? rnd(.32, .46) : rnd(.15, .36) + depth * .08;
+    const blur  = depth < .3 ? rnd(1.2, 2.6) : 0;
+    const bob   = rnd(3.4, 7.2);
+    const dir   = Math.random() < .22 ? ' reverse' : '';
+
+    return `<div class="flt" style="
+        top:${top.toFixed(1)}%;width:${size.toFixed(0)}px;
+        opacity:${op.toFixed(2)};
+        animation-duration:${dur.toFixed(1)}s;
+        animation-delay:${delay.toFixed(1)}s;
+        animation-direction:${dir ? 'reverse' : 'normal'};
+        ${blur ? `filter:blur(${blur.toFixed(1)}px);` : ''}">
+        <i style="animation-duration:${bob.toFixed(1)}s;animation-delay:${(-rnd(0,bob)).toFixed(1)}s">
+          <img src="assets/img/${f.src}" alt="" loading="${i < 6 ? 'eager' : 'lazy'}" decoding="async">
+        </i>
+      </div>`;
+  }).join('');
+}
+
 /* ───────── ASK (목업) ─────────
    TODO: 엔진 연결 시 질문 → PRODUCTS[].tags 매칭 → 결과 그리드 렌더.
    지금은 입력/로딩까지만 진짜고 결과는 준비중 안내. */
@@ -354,7 +406,7 @@ function ask() {
 }
 
 /* ───────── INIT ───────── */
-function boot() { renderShop(); filters(); burger(); clocks(); ticker(); typePlaceholder(); ask(); pdpInit(); }
+function boot() { renderShop(); filters(); burger(); clocks(); ticker(); floats(); typePlaceholder(); ask(); pdpInit(); }
 
 if (document.readyState === 'loading') addEventListener('DOMContentLoaded', boot);
 else boot();
