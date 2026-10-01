@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOTHING HAPPENS — Y2K UNISEX LABEL / SEOUL</title>
+<meta name="description" content="1999년 12월 31일, 세상은 끝난다고 했다. 아무 일도 일어나지 않았다. NOTHING HAPPENS — 서울 기반 Y2K 유니섹스 레이블.">
+<meta property="og:title" content="NOTHING HAPPENS">
+<meta property="og:description" content="NOTHING ENDED. NOTHING BEGAN. WE JUST KEPT GETTING DRESSED.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="is-intro">
+
+<!-- ═══════════ INTRO MOTION ═══════════
+     NO → O 구멍에서 HAPPENS 압출 → THING 삽입 → 로고 완성
+     ═══════════════════════════════════ -->
+<div class="intro" id="intro">
+  <div class="intro-stage">
+    <div class="word" id="word">
+<span class="grp" id="noGrp"><span class="ch" id="chN">N</span><span class="ch" id="chO">O</span></span><span class="grp" id="thingGrp"><span class="ch t">T</span><span class="ch t">H</span><span class="ch t">I</span><span class="ch t">N</span><span class="ch t">G</span></span> <span class="hapmask" id="hapMask"><span class="hap" id="hap">HAPPENS</span></span>
+      <span class="o-ring" id="oRing"></span>
+      <span class="o-ring o-ring2" id="oRing2"></span>
+    </div>
+  </div>
+  <div class="intro-cue" id="introCue">EST. 2000 — SEOUL</div>
+  <button class="intro-skip" id="introSkip" type="button">SKIP</button>
+</div>
+
+<!-- ═══════════ PAGE TRANSITION CURTAIN ═══════════ -->
+<div class="curtain" id="curtain" aria-hidden="true">
+  <span class="curtain-mark">NOTHING HAPPENS</span>
+</div>
+
+<!-- ═══════════ CURSOR ═══════════ -->
+<div class="cursor" id="cursor"><span class="cursor-label" id="cursorLabel"></span></div>
+
+<!-- ═══════════ SCROLL PROGRESS ═══════════ -->
+<div class="prog" id="prog"><span id="progBar"></span></div>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="hd" id="hd">
+  <a href="#top" class="hd-logo" data-c data-nav>NOTHING HAPPENS</a>
+  <nav class="hd-nav">
+    <a href="#release" data-c data-nav>RELEASE</a>
+    <a href="#shop" data-c data-nav>SHOP</a>
+    <a href="#archive" data-c data-nav>ARCHIVE</a>
+    <a href="#cast" data-c data-nav>CAST</a>
+  </nav>
+  <div class="hd-right">
+    <span class="hd-sec" id="hdSec">00 / INDEX</span>
+    <a href="#shop" class="hd-bag" data-c data-nav data-mag>BAG (0)</a>
+    <button class="hd-burger" id="burger" aria-label="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ═══════════ MOBILE MENU ═══════════ -->
+<div class="mnav" id="mnav">
+  <a href="#release" data-nav>RELEASE</a>
+  <a href="#shop" data-nav>SHOP</a>
+  <a href="#archive" data-nav>ARCHIVE</a>
+  <a href="#cast" data-nav>CAST</a>
+  <div class="mnav-foot">EST. 2000 — SEOUL</div>
+</div>
+
+<!-- ═══════════ SMOOTH SCROLL WRAPPER ═══════════ -->
+<div class="swrap" id="swrap">
+
+<main id="top">
+
+<!-- ───────── HERO ───────── -->
+<section class="hero" data-sec="00 / INDEX">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-veil"></div>
+
+  <div class="hero-meta hero-meta-tl">
+    <span>N°001</span><span>SEOUL / KR</span>
+  </div>
+  <div class="hero-meta hero-meta-tr">
+    <span id="heroDate">—</span><span>37.5665° N</span>
+  </div>
+
+  <h1 class="hero-type">
+    <span class="line"><em>NOTHING</em></span>
+    <span class="line"><em>HAPPENS</em></span>
+  </h1>
+
+  <div class="hero-sub">
+    <p>세상은 끝난다고 했다. 아무 일도 일어나지 않았다.</p>
+  </div>
+
+  <!-- ───────── ASK : AI 큐레이션 (현재 목업) ───────── -->
+  <section class="ask" id="ask">
+    <h2 class="ask-title">오늘은 어떤 옷이 필요하신가요?</h2>
+
+    <form class="ask-form" id="askForm" autocomplete="off" role="search">
+      <span class="ask-mark">✱</span>
+      <div class="ask-field">
+        <input type="text" id="askInput" aria-label="상황을 입력하면 스타일을 추천합니다" spellcheck="false">
+        <span class="ask-ph" id="askPh" aria-hidden="true"><span id="askPhText"></span><i></i></span>
+      </div>
+      <button type="submit" class="ask-go" id="askGo" aria-label="추천받기" data-mag>→</button>
+    </form>
+
+    <div class="ask-chips">
+      <button type="button" class="chip" data-q="홍대 가서 헌팅할 때 입을 옷">홍대 헌팅룩</button>
+      <button type="button" class="chip" data-q="여자친구랑 첫 데이트룩">첫 데이트룩</button>
+      <button type="button" class="chip" data-q="밤새 놀아도 안 구겨지는 옷">밤새 놀 옷</button>
+      <button type="button" class="chip" data-q="친구 결혼식 하객룩인데 튀고 싶어">튀는 하객룩</button>
+      <button type="button" class="chip" data-q="다리 길어 보이는 바지">다리 길어 보이게</button>
+    </div>
+
+    <p class="ask-note" id="askNote" role="status" aria-live="polite"></p>
+  </section>
+
+  <a href="#mani" class="hero-scroll" data-c data-nav>
+    <span>SCROLL</span>
+    <i></i>
+  </a>
+</section>
+
+<!-- ───────── TICKER ───────── -->
+<div class="ticker" id="ticker">
+  <div class="ticker-row" id="tickerRow"></div>
+</div>
+
+<!-- ───────── MANIFESTO ───────── -->
+<section class="mani" id="mani" data-sec="01 / MANIFESTO">
+  <div class="sec-head">
+    <span class="sec-num" data-anim="fade">01</span>
+    <span class="sec-name" data-anim="chars">MANIFESTO</span>
+    <span class="sec-line"></span>
+  </div>
+
+  <div class="mani-body">
+    <p class="mani-lead" data-anim="chars" data-step="14">
+      비행기가 떨어지고, 은행이 멈추고, 전기가 나간다고 했다.<br>
+      우리는 자정을 기다렸다.
+    </p>
+    <p class="mani-big">
+      <em data-anim="chars" data-step="38" data-wave>아무 일도<br>일어나지 않았다.</em>
+    </p>
+    <p class="mani-tail" data-anim="chars" data-step="12">
+      그 뒤로 우리는 그냥 계속 옷을 입었다.<br>
+      <span class="sub">NOTHING ENDED. NOTHING BEGAN. WE JUST KEPT GETTING DRESSED.</span>
+    </p>
+  </div>
+
+  <div class="mani-stat">
+    <div class="stat" data-anim="pop"><b data-count="2000">0</b><span>SYSTEM YEAR</span></div>
+    <div class="stat" data-anim="pop"><b data-count="0">0</b><span>DISASTERS</span></div>
+    <div class="stat" data-anim="pop"><b data-count="3">0</b><span>RELEASES</span></div>
+    <div class="stat" data-anim="pop"><b data-count="1">0</b><span>SIZE: UNISEX</span></div>
+  </div>
+</section>
+
+<!-- ───────── RELEASE ───────── -->
+<section class="rel" id="release" data-sec="02 / RELEASE">
+  <div class="sec-head">
+    <span class="sec-num" data-anim="fade">02</span>
+    <span class="sec-name" data-anim="chars">RELEASE</span>
+    <span class="sec-line"></span>
+    <span class="sec-note" data-anim="fade">컬렉션은 앨범처럼 발매된다. 재발매 없음.</span>
+  </div>
+
+  <div class="rel-grid">
+    <article class="rel-card" data-anim="pop" data-c data-cur="VIEW">
+      <div class="rel-img"><img src="assets/img/cover-01.jpg" alt="VOL.01 FALSE ALARM" data-speed="-.06"><span class="rel-tag">OUT NOW</span></div>
+      <div class="rel-info">
+        <div class="rel-vol">VOL.01</div>
+        <h3>FALSE ALARM</h3>
+        <p>오경보. 일어나지 않은 재난을 위한 첫 번째 기록.</p>
+        <div class="rel-foot"><span>12 PIECES</span><span>2000.01.01</span></div>
+      </div>
+    </article>
+
+    <article class="rel-card" data-anim="pop" data-c data-cur="VIEW">
+      <div class="rel-img"><img src="assets/img/cover-02.jpg" alt="VOL.02 SAFE MODE" data-speed="-.06"><span class="rel-tag">OUT NOW</span></div>
+      <div class="rel-info">
+        <div class="rel-vol">VOL.02</div>
+        <h3>SAFE MODE</h3>
+        <p>안전 모드. 최소한의 기능으로 부팅된 옷.</p>
+        <div class="rel-foot"><span>09 PIECES</span><span>2000.06.15</span></div>
+      </div>
+    </article>
+
+    <article class="rel-card" data-anim="pop" data-c data-cur="SOON">
+      <div class="rel-img"><img src="assets/img/cover-03.jpg" alt="VOL.03 LOW RESOLUTION" data-speed="-.06"><span class="rel-tag rel-tag-soon">COMING</span></div>
+      <div class="rel-info">
+        <div class="rel-vol">VOL.03</div>
+        <h3>LOW RESOLUTION</h3>
+        <p>저해상도. 흐릿하게 기억되는 것들에 대하여.</p>
+        <div class="rel-foot"><span>TBA</span><span>2000.11.— </span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ───────── SHOP ───────── -->
+<section class="shop" id="shop" data-sec="03 / SHOP">
+  <div class="sec-head">
+    <span class="sec-num" data-anim="fade">03</span>
+    <span class="sec-name" data-anim="chars">SHOP</span>
+    <span class="sec-line"></span>
+    <span class="sec-note" data-anim="fade">ALL UNISEX / FREE SIZE</span>
+  </div>
+
+  <div class="shop-filter" data-anim="pop">
+    <button class="f-btn is-on" data-f="all" data-mag>ALL</button>
+    <button class="f-btn" data-f="outer" data-mag>OUTER</button>
+    <button class="f-btn" data-f="top" data-mag>TOP</button>
+    <button class="f-btn" data-f="bottom" data-mag>BOTTOM</button>
+    <button class="f-btn" data-f="acc" data-mag>ACC</button>
+  </div>
+
+  <div class="shop-grid" id="shopGrid"></div>
+</section>
+
+<!-- ───────── ARCHIVE ───────── -->
+<section class="arc" id="archive" data-sec="04 / ARCHIVE">
+  <div class="sec-head">
+    <span class="sec-num" data-anim="fade">04</span>
+    <span class="sec-name" data-anim="chars">ARCHIVE</span>
+    <span class="sec-line"></span>
+  </div>
+
+  <div class="arc-row">
+    <figure class="arc-fig" data-anim="clip" data-c data-cur="OPEN">
+      <img src="assets/img/look-01.jpg" alt="LOOKBOOK 01" data-speed="-.12">
+      <figcaption><span>LOOKBOOK 01</span><span>FALSE ALARM</span></figcaption>
+    </figure>
+    <figure class="arc-fig" data-anim="clip" data-c data-cur="OPEN">
+      <img src="assets/img/look-02.jpg" alt="LOOKBOOK 02" data-speed="-.12">
+      <figcaption><span>LOOKBOOK 02</span><span>SAFE MODE</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="arc-quote">
+    <p data-anim="chars" data-step="26" data-wave>“우리는 종말을 기다리다가<br>옷을 고르게 됐다.”</p>
+  </div>
+</section>
+
+<!-- ───────── CAST ───────── -->
+<section class="cast" id="cast" data-sec="05 / CAST">
+  <div class="cast-inner">
+    <div class="sec-head sec-head-light">
+      <span class="sec-num" data-anim="fade">05</span>
+      <span class="sec-name" data-anim="chars">CAST</span>
+      <span class="sec-line"></span>
+    </div>
+    <h2 class="cast-type" data-anim="chars" data-step="44" data-wave>WE ARE<br>CASTING<br><em>EVERYONE</em></h2>
+    <p class="cast-desc" data-anim="chars" data-step="12">
+      모델, 포토그래퍼, 스타일리스트.<br>
+      경력 무관. 성별 무관. 사이즈 무관.<br>
+      <span class="sub">NO AGENCY REQUIRED.</span>
+    </p>
+    <a href="mailto:cast@nothinghappens.kr" class="cast-btn" data-c data-mag data-anim="pop">APPLY NOW →</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="ft" data-sec="06 / INFO">
+  <div class="ft-type" data-anim="chars" data-step="34">NOTHING HAPPENS</div>
+
+  <div class="ft-cols">
+    <div class="ft-col" data-anim="pop">
+      <h4>SHOP</h4>
+      <a href="#shop" data-nav>ALL PRODUCTS</a>
+      <a href="#release" data-nav>RELEASES</a>
+      <a href="#archive" data-nav>ARCHIVE</a>
+    </div>
+    <div class="ft-col" data-anim="pop">
+      <h4>INFO</h4>
+      <a href="#">배송 / 반품</a>
+      <a href="#">사이즈 가이드</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="ft-col" data-anim="pop">
+      <h4>CONTACT</h4>
+      <a href="https://instagram.com" target="_blank" rel="noopener">INSTAGRAM</a>
+      <a href="mailto:hello@nothinghappens.kr">EMAIL</a>
+      <a href="#cast" data-nav>CASTING</a>
+    </div>
+    <div class="ft-col ft-news" data-anim="pop">
+      <h4>NEWSLETTER</h4>
+      <p>발매 알림만 보냅니다. 그 외엔 아무 일도 안 일어납니다.</p>
+      <form class="ft-form" onsubmit="return false;">
+        <input type="email" placeholder="EMAIL ADDRESS" required>
+        <button type="submit" data-c data-mag>→</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="ft-legal">
+    <div class="ft-biz">
+      <span>NOTHING HAPPENS</span>
+      <span>대표 — / 사업자등록번호 000-00-00000</span>
+      <span>통신판매업신고 제0000-서울-0000호</span>
+      <span>서울특별시 —</span>
+    </div>
+    <div class="ft-bot">
+      <span>© 2000– NOTHING HAPPENS. ALL RIGHTS RESERVED.</span>
+      <span class="ft-clock" id="ftClock">00:00:00</span>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /.swrap -->
+
+<script src="assets/js/intro.js"></script>
+<script src="assets/js/motion.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
